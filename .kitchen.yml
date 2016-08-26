@@ -1,0 +1,16 @@
+---
+driver:
+  name: docker
+driver_config:
+  require_chef_omnibus: true
+  use_sudo: false
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list: ['spark::standalone']
